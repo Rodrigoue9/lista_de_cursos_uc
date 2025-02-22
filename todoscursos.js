@@ -394,13 +394,7 @@ const cursos = [
     },
 
     // BACHARELADOS
-    {
-        nome: 'Agronomia',
-        duracao: '5 anos',
-        tipo: 'bacharelado',
-        classe: 'a',
-        link: 'https://api.whatsapp.com/send?phone=+556286275044&text=Olá! Quero informações sobre a graduação de Agronomia.'
-    },
+   
     {
         nome: 'Administração',
         duracao: '4 anos',
@@ -450,20 +444,8 @@ const cursos = [
         classe: 'd',
         link: 'https://api.whatsapp.com/send?phone=+556286275044&text=Olá! Quero informações sobre a graduação de Design.'
     },
-    {
-        nome: 'Enfermagem',
-        duracao: '5 anos',
-        tipo: 'bacharelado',
-        classe: 'e',
-        link: 'https://api.whatsapp.com/send?phone=+556286275044&text=Olá! Quero informações sobre a graduação de Enfermagem.'
-    },
-    {
-        nome: 'Educação Física',
-        duracao: '4 anos',
-        tipo: 'bacharelado',
-        classe: 'e',
-        link: 'https://api.whatsapp.com/send?phone=+556286275044&text=Olá! Quero informações sobre a graduação de Educação Física.'
-    },
+   
+    
     {
         nome: 'Engenharia Da Computação',
         duracao: '5 anos',
