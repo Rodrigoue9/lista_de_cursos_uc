@@ -1,0 +1,141 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    background-color: #f4f8fc;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilização do campo de pesquisa */
+.Espaco-button-input {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 50%;
+    border: 2px solid #008ecf;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+}
+
+.search-button {
+    padding: 12px 20px;
+    background-color: #008ecf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background-color: #006ba1;
+}
+
+/* Botões de filtro */
+.space-button-filter-fix {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.button-filter-type {
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.button-filter-type:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.filter-type-licenciatura { background-color: #008ecf; color: white; }
+.filter-type-bacharelado { background-color: #00bcd4; color: white; }
+.filter-type-tecnologo { background-color: #005a8d; color: white; }
+
+/* Lista de cursos */
+#courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-item {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilos dinâmicos para cada tipo de curso */
+.image-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+.tipo-bacharelado::before {
+    background: linear-gradient(90deg, #008ecf, #00bcd4, #005a8d);
+}
+
+.tipo-licenciatura::before {
+    background: linear-gradient(90deg, #ff5722, #ff9800, #d84315);
+}
+
+.tipo-tecnologo::before {
+    background: linear-gradient(90deg, #27d86c, #00c853, #1b5e20);
+}
+
+.textnamecourses h3, .textDuration h3 {
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 80%;
+    }
+
+    .space-button-filter-fix {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/novo.css">
+    <title>Search Courses</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="Espaco-button-input">
+        <input placeholder="Pesquisar" type="text" id="searchInput" style="caret-color: red;" onkeydown="handleKeyDown(event)">
+        <button class="search-button" onclick="search()">Pesquisar</button>
+    </div>
+    
+ <div class="space-button-filter">
+    <div class="space-button-filter-fix">
+        <button onclick="filtrarPorId('licenciatura')">Licenciatura</button>
+        <button onclick="filtrarPorId('bacharelado')">Bacharelado</button>
+        <button onclick="filtrarPorId('tecnologo')">Tecnólogo</button>
+    </div>
+</div>
+
+    
+
+    <div class="doido" id="filterButtons">
+        <!-- Botões de filtro serão gerados dinamicamente via JavaScript -->
+    </div>
+
+    <div class="text-filter">
+        <p>Clique e filtre os cursos.</p>
+    </div>
+
+    <div id="courses">
+        <!-- Cursos serão gerados dinamicamente via JavaScript -->
+    </div>
+<script> 
+
+    console.log("Cursos gerados:");
+document.querySelectorAll('.image-item').forEach(curso => {
+    console.log(curso.className);
+});
+
+</script>
+    <script src="main.js"></script>
+    <script src="todoscursos.js"></script>
+    <script src="cursos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+    <script src="https://kit.fontawesome.com/abaec65dc3.js" crossorigin="anonymous"></script>
+</body>
+</html>
